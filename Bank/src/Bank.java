@@ -3,7 +3,7 @@ import java.util.*; // For taking the input we have imported this
 class Account{
 	int balance = 1000;
 	//Defining method
-	void getBalance() {System.out.println("Your account balance is:" +balance);}
+	void getBalance() {System.out.print("Your account balance is:" +balance);}
 	//Defining method
 	void depositeAmount(int x) {
 		balance= balance+x;
@@ -11,12 +11,12 @@ class Account{
 	//Defining method
 	void WithdrawAmount(int y) {
 		balance= balance-y;
-		System.out.println("Congrats! you have successfully withdraw:" +balance);}
+		System.out.println("Congrats! you have successfully withdraw:" +y+ " and not the balance remaining is " +balance);}
 }
 // Defining subclass
 class SavingAc extends Account{
 	//Defining method
-	void getBalance() {System.out.println("Your account balance is:" +balance);}
+	void getBalance() {System.out.print("Your account balance is:" +balance);}
 	//Defining method
 	void depositeAmount(int x) {
 		balance= balance+x;
@@ -31,7 +31,7 @@ class CurrentAc extends Account{
 	//Defining method
 	void getBalance() {
 		balance= balance-10;
-		System.out.println("Your account balance is:" +balance+ " after Rs.10 transcation fee charges");}
+		System.out.print("Your account balance is:" +balance+ " after Rs.10 transcation fee charges");}
 	//Defining method
 	void depositeAmount(int x) {
 		balance= balance+x-10;
@@ -39,7 +39,7 @@ class CurrentAc extends Account{
 	//Defining method
 	void WithdrawAmount(int y) {
 		balance= balance-y-10;
-		System.out.println("Congrats! you have successfully withdraw:" +balance+ " after Rs.10 transcation fee charges");}
+		System.out.println("Congrats! you have successfully withdraw:" +y+ " and not the balance remaining is " +balance+ " after Rs.10 transcation fee charges");}
 }
 public class Bank {
 
@@ -64,7 +64,7 @@ public class Bank {
 			}
 			else if (b==3) {
 				ca.getBalance();
-				System.out.println("You can not enter more than balance money");
+				System.out.print("You can not enter more than balance money");
 				System.out.println("Enter the value to Withdraw the amount:");
 				int y = sc.nextInt();				
 				ca.WithdrawAmount(y);
@@ -85,7 +85,7 @@ public class Bank {
 				}
 				else if (c==3) {
 					sa.getBalance();
-					System.out.println("You can not enter more than balance money");
+					System.out.print("You can not enter more than balance money");
 					System.out.println("Enter the value to Withdraw the amount:");
 					int y = sc.nextInt();				
 					sa.WithdrawAmount(y);

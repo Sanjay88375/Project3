@@ -32,11 +32,11 @@ class CurrentAc extends Account{
 	void getBalance() {System.out.println("Your account balance is:" +balance);}
 	//Defining method
 	void depositeAmount(int x) {
-		balance= balance+x;
+		balance= balance+x-10;
 		System.out.println("Congrats! you have deposite:" +balance);}
 	//Defining method
 	void WithdrawAmount(int y) {
-		balance= balance-y;
+		balance= balance-y-10;
 		System.out.println("Congrats! you have successfully withdraw:" +balance);}
 }
 public class Bank {

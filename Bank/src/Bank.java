@@ -29,21 +29,22 @@ class SavingAc extends Account{
 //Defining subclass
 class CurrentAc extends Account{
 	//Defining method
-	void getBalance() {System.out.println("Your account balance is:" +balance);}
+	void getBalance() {
+		balance= balance-10;
+		System.out.println("Your account balance is:" +balance+ " after Rs.10 transcation fee charges");}
 	//Defining method
 	void depositeAmount(int x) {
 		balance= balance+x-10;
-		System.out.println("Congrats! you have deposite:" +balance);}
+		System.out.println("Congrats! you have deposite:" +balance+ " after Rs.10 transcation fee charges");}
 	//Defining method
 	void WithdrawAmount(int y) {
 		balance= balance-y-10;
-		System.out.println("Congrats! you have successfully withdraw:" +balance);}
+		System.out.println("Congrats! you have successfully withdraw:" +balance+ " after Rs.10 transcation fee charges");}
 }
 public class Bank {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Account ac = new Account();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please let me know if it's Current account or Saving account. Kindly press 1 for Current account or press two for the saving account:");
 		int a = sc.nextInt();
